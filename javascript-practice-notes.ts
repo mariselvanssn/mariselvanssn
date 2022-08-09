@@ -1,4 +1,4 @@
-Sum two numbers:
+// Sum two numbers:
 // Write a function that takes two numbers (a and b) as argument
 // Sum a and b
 // Return the result
@@ -6,7 +6,7 @@ Sum two numbers:
 function myFunction(a, b) {
   return a + b;
 }
-Test cases:
-  myFunction(1,2) Expected: 3
-  myFunction(1,10) Expected: 11
-  myFunction(99,1) Expected: 100
+
+myFunction(1,2) // Expected: 3
+myFunction(1,10) // Expected: 11
+myFunction(99,1) // Expected: 100
