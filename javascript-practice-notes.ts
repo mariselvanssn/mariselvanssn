@@ -320,6 +320,17 @@
   myFunction([10,100,1000,1]) // Expected: 1111
   myFunction([-50,0,50,200]) // Expected: 200
 
+  // 2.12 Return the average of an array of numbers
+  // Write a function that takes an array of numbers as argument
+  // It should return the average of the numbers
+   function myFunction(arr) {
+     var sum = arr.reduce((acc, cur) => acc + cur);
+     return sum/arr.length;
+   }
+   myFunction([10,100,40]) // Expected: 50
+   myFunction([10,100,1000]) // Expected: 370
+   myFunction([-50,0,50,200]) // Expected: 50
+
 // 3. Javascript Objects:
   // 3.1 Accessing object properties one:
   // Write a function that takes an object with two properties as argument
