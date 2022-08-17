@@ -475,6 +475,20 @@
   myFunction(new Date('2000/01/01 08:45:00'), new Date('2000/01/01 08:00:00')) // Expected: false
   myFunction(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:00:00')) // Expected: false
 
+  // 4.2 Add n days to an existing date
+  // Write a function that takes as argument a date instance (a) and a number (b)
+  // It should add b days to a and return the number of milliseconds since January 1, 1970, 00:00:00 UTC
+   function myFunction(a, b) {
+     return a.setDate(a.getDate() + b);
+   }
+   function myFunction(a, b) {
+     const currentDays = a.getDate();
+     return a.setDate(currentDays + b)
+   }
+   myFunction(new Date(Date.UTC(2000,01,01)), 31) // Expected: 952041600000
+   myFunction(new Date(Date.UTC(2000,01,01)), 10) // Expected: 950227200000
+   myFunction(new Date(Date.UTC(2000,02,28,)), 2) // Expected: 954374400000
+
 // 5.Javascript Sets
   // 5.1 Check if value is present in Set:
   // Write a function that takes a Set and a value as arguments
