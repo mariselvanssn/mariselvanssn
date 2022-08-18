@@ -348,8 +348,8 @@
     function myFunction(obj) {
       return obj['prop-2'];
     }
-    myFunction({  one: 1,  'prop-2': 2}) Expected: 2
-    myFunction({  'prop-2': 'two',  prop: 'test'}) Expected: 'two'
+    myFunction({  one: 1,  'prop-2': 2}) // Expected: 2
+    myFunction({  'prop-2': 'two',  prop: 'test'}) // Expected: 'two'
 
   // 3.3 Accessing object properties three:
   // Write a function that takes an object with two properties and a string as arguments
