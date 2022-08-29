@@ -534,3 +534,18 @@
   myFunction(new Set([1, 2, 3]), 1) // Expected: new Set([2, 3])
   myFunction(new Set('12345'), '3') // Expected: new Set(['1', '2', '4', '5'])
   myFunction(new Set([1, 2, 3]), 4) // Expected: new Set([1, 2, 3])
+
+ // 5.4 Creating Javascript Sets
+ // Write a function that takes three elements of any type as arguments
+ // Create a Set from those elements
+ // Return the result
+  function myFunction(a, b, c) {
+    const set = new Set();
+    set.add(a);
+    set.add(b);
+    set.add(c);
+    return set;
+  }
+ myFunction(1, 'b', 3) // Expected: new Set([1, 'b', 3])
+ myFunction(NaN, null, false) // Expected: new Set([NaN, null, false])
+ myFunction('a', ['b'], { c: 3 }) // Expected: new Set(['a', ['b'], { c: 3 }])
