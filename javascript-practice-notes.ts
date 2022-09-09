@@ -507,7 +507,17 @@
    myFunction(new Date(Date.UTC(2000,01,01)), 31) // Expected: 952041600000
    myFunction(new Date(Date.UTC(2000,01,01)), 10) // Expected: 950227200000
    myFunction(new Date(Date.UTC(2000,02,28,)), 2) // Expected: 954374400000
-
+// 4.3 Check if two dates are equal
+    // Sounds easy, but you need to know the trick
+    // Write a function that takes two date instances as arguments
+    // It should return true if the dates are equal
+    // It should return false otherwise
+    function myFunction(a, b) {
+     return a.getTime() === b.getTime()
+    }
+    myFunction(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')) // Expected: false
+    myFunction(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:00:00')) // Expected: true
+    myFunction(new Date('2001/01/01 08:00:00'), new Date('2000/01/01 08:00:00')) // Expected: false
 // 5.Javascript Sets
   // 5.1 Check if value is present in Set:
   // Write a function that takes a Set and a value as arguments
