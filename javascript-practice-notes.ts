@@ -361,6 +361,25 @@ myFunction('z', 'how many times does the character occur in this sentence?') // 
    myFunction([10,100,1000]) // Expected: 370
    myFunction([-50,0,50,200]) // Expected: 50
 
+// 2.13 Sum up all array elements with values greater than
+// Write a function that takes an array (a) and a number (b) as arguments
+// Sum up all array elements with a value greater than b
+// Return the sum
+  function myFunction(a, b) {
+    return a.filter((arrVal) => arrVal > b).reduce((sum, a) => sum + a);
+  }
+  
+  function myFunction(a, b) {
+    return a.reduce((sum, cur) => {
+      if (cur > b) return sum + cur;
+      return sum;
+    }, 0);
+  }
+
+  myFunction([1, 2, 3, 4, 5, 6, 7], 2) // Expected: 25
+  myFunction([-10, -11, -3, 1, -4], -3) // Expected: 1
+  myFunction([78, 99, 100, 101, 401], 99) // Expected: 602
+
 // 3. Javascript Objects:
   // 3.1 Accessing object properties one:
   // Write a function that takes an object with two properties as argument
