@@ -380,6 +380,24 @@ myFunction('z', 'how many times does the character occur in this sentence?') // 
   myFunction([-10, -11, -3, 1, -4], -3) // Expected: 1
   myFunction([78, 99, 100, 101, 401], 99) // Expected: 602
 
+// 2.14 Sort array by object property
+// Write a function that takes an array of objects as argument
+// Sort the array by property b in ascending order
+// Return the sorted array
+
+function myFunction(arr) {
+   return arr.sort((item, cur) => item.b > cur.b ? 1 : -1);
+}
+
+function myFunction(arr) {
+   const sort = (x, y) => x.b - y.b;
+   return arr.sort(sort);
+}
+
+myFunction([{a:1,b:2},{a:5,b:4}]) // Expected: [{a:1,b:2},{a:5,b:4}]
+myFunction([{a:2,b:10},{a:5,b:4}]) // Expected: [{a:5,b:4},{a:2,b:10}]
+myFunction([{a:1,b:7},{a:2,b:1}]) // Expected: [{a:2,b:1},{a:1,b:7}]
+
 // 3. Javascript Objects:
   // 3.1 Accessing object properties one:
   // Write a function that takes an object with two properties as argument
