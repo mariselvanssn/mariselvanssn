@@ -179,7 +179,7 @@
   myFunction(5) // Expected: false
   myFunction(-111) // Expected: false
   
-  // Check if a number is a whole number
+  //1.16 Check if a number is a whole number
   // Write a function that takes a number (a) as argument
   // If a is a whole number (has no decimal place), return true
   // Otherwise, return false
@@ -193,6 +193,22 @@
   myFunction(1.123) // Expected: false
   myFunction(1048) //Expected: true 
   myFunction(10.48) // Expected: false 
+
+// 1.17 How many times does a character occur?
+// Write a function that takes two strings (a and b) as arguments
+// Return the number of times a occurs in b
+
+ function myFunction(a, b) {
+   return b.split('').filter((str) => str === a).length;
+ }
+function myFunction(a, b) {
+  return b.split(a).length - 1
+}
+
+myFunction('m', 'how many times does the character occur in this sentence?') // Expected: 2
+myFunction('h', 'how many times does the character occur in this sentence?') // Expected: 4
+myFunction('?', 'how many times does the character occur in this sentence?') // Expected: 1
+myFunction('z', 'how many times does the character occur in this sentence?') // Expected: 0
 
 // 2.Javascript Arrays:
 
